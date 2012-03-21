@@ -8,6 +8,11 @@ class BreathController < ApplicationController
 
     temp = params[:temp].to_i
     humidity = params[:humidity].to_i
+
+    # Tweak the formula
+    temp += 2
+    humidity -= 8
+
     result = (chart[temp] && chart[temp][humidity]) ? "YES" : "NO"
     render :text => result
   end
