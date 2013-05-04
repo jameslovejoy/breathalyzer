@@ -21,8 +21,8 @@ p.no {
     color: #B94A48;
 }
 div.seebreath {
-    height: 150px;
-    margin-top: 70px;
+    height: 130px;
+    margin-top: 80px;
     font-style: normal;
 }
 div.seebreath p em {
@@ -33,4 +33,11 @@ div.seebreath p {
 }
 td.location, td.temp, td.humidity {
     font-weight: bold;
+}
+input {
+    height: 34px !important;
+    font-size: 12pt !important;
+}
+div.location {
+    margin-top: 20px;
 }
