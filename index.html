@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Breathalyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen" />
+    <link href="assets/css/styles.css" rel="stylesheet" media="screen" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/breath.js"></script>
+    <script src="assets/js/weather.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row" class="spacer20">&nbsp;</div>
+
+      <div class="row">
+        <div class="span12">
+          <h4><a href="/">Can you see your breath?</a></h4>
+        </div>
+      </div>
+
+      <div class="row seebreath">
+        <div class="span12">
+          <p class="seebreath"><img src="assets/img/spinner.gif" /></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span12">
+          <table class="table table-condensed">
+            <tbody>
+              <tr><td><i class="icon-map-marker"></i> Location</td><td class="location">Loading...</td></tr>
+              <tr><td><i class="icon-cog"></i> Temperature</td><td class="temp">Loading...</td></tr>
+              <tr><td><i class="icon-tint"></i> Humidity</td><td class="humidity">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span12">
+
+          <div class="location">
+            <button class="btn btn-small hide" id="change-location"><i class="icon-screenshot"></i> New Location</button>
+          </div>
+
+          <form action="/" method="get" class="form-inline hide" id="change-location-form">
+            <div class="input-append">
+              <input type="text" name="location" class="input-xsmall input-append" placeholder="Enter City Name"/>
+              <button class="btn btn-primary btn-large">Go</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <div class="row" class="spacer20">&nbsp;</div>
+
+      <div class="row">
+        <small>Weather from <a href="http://www.openweathermap.org">OpenWeatherMap</a></small>
+      </div>
+    </div>
+  </body>
+</html>
