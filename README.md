@@ -2,9 +2,9 @@
 
 Can you see your breath at the current temperature and humidity?
 
-Check it out at **http://breathalyzer.herokuapp.com/**
+Check it out at **http://jameslovejoy.github.io/breathalyzer/**
 
 ## Sources
 
-  * [Weather Underground](http://www.wunderground.com/)
+  * [OpenWeatherMap](http://www.openweathermap.org/)
   * [Exhale Condensation Calculator](http://www.sciencebits.com/ExhaleCondCalc)
