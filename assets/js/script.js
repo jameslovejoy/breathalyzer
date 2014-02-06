@@ -55,7 +55,7 @@ breathalyzer.enableChangeLocation = function() {
 	$("#change-location").show().on("click", function() {
 		$div.hide();
 		$form.show();
-		$input.focus();
+		$input.select();
 	});
 
 	$form.on("submit", function(e) {

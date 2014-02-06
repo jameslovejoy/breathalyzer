@@ -10,7 +10,16 @@ breathalyzer.breath.see = function(weatherdata, callback) {
 		temp_c += 3;
 		humidity -= 10;
 
-		callback(chart[temp_c] && chart[temp_c][humidity] ? "YES" : "NO");
+		var result = chart[temp_c] && chart[temp_c][humidity];
+		var string_response;
+
+		if(temp_c < 0) {
+			string_response = "YES";
+		} else {
+			string_response = result ? "YES" : "NO";
+		}
+
+		callback(string_response);
 	});
 
 };
