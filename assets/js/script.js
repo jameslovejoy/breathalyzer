@@ -14,7 +14,10 @@ breathalyzer.useBrowserLocation = function() {
 			var longitude = position.coords.longitude;
 
 			breathalyzer.weather.getLatLon(latitude, longitude, function(weatherdata) {
-				breathalyzer.breath.see(weatherdata, function(seebreath) {
+				var temp_c = Math.round(weatherdata.currently.temperature);
+				var humidity = weatherdata.currently.humidity * 100;
+
+				breathalyzer.breath.see(temp_c, humidity, function(seebreath) {
 
 					breathalyzer.output(weatherdata, seebreath);
 
@@ -37,10 +40,10 @@ breathalyzer.useQueryLocation = function(query) {
 breathalyzer.output = function(weatherdata, seebreath) {
 
 	// Display results
-	var temp_f = Math.round(weatherdata.main.temp * 9/5 + 32);
-	$("td.location").html(weatherdata.name || latitude + " " + longitude);
+	var temp_f = Math.round(weatherdata.currently.temperature * 9/5 + 32);
+	$("td.location").html(Math.round(weatherdata.latitude * 1000)/1000.0 + ", " + Math.round(weatherdata.longitude * 1000)/1000.0);
 	$("td.temp").html(temp_f + "&deg;F");
-	$("td.humidity").html(weatherdata.main.humidity + "%");
+	$("td.humidity").html(weatherdata.currently.humidity * 100 + "%");
 	$("p.seebreath").html(seebreath).removeClass("yes no").addClass(seebreath.toLowerCase());
 	$("div.loading").hide();
 
@@ -76,7 +79,7 @@ breathalyzer.enableChangeLocation = function() {
 };
 
 $(document).ready(function() {
-	
+
 	breathalyzer.init();
 
 });

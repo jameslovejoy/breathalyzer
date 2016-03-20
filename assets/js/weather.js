@@ -1,10 +1,10 @@
 breathalyzer.weather = {};
 
-breathalyzer.weather.URL = "http://api.openweathermap.org/data/2.5/weather?units=metric";
+breathalyzer.weather.URL = "https://api.forecast.io/forecast/3871e8fde55080cb4e1d4a30e70cfdea/";
 
 breathalyzer.weather.getLatLon = function(lat, lon, callback) {
 
-	var url = breathalyzer.weather.URL + "&lat=" + lat + "&lon=" + lon;
+	var url = breathalyzer.weather.URL + lat + "," + lon + "?units=si";
 
 	$.get(url, function(data) {
     	callback(data);
