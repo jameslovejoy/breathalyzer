@@ -7,8 +7,8 @@ breathalyzer.weather.getLatLon = function(lat, lon, callback) {
 	var url = breathalyzer.weather.URL + lat + "," + lon + "?units=si";
 
 	$.get(url, function(data) {
-    	callback(data);
-    }, 'jsonp');
+			callback(data);
+		}, 'jsonp');
 
 };
 

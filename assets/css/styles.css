@@ -22,9 +22,10 @@ p.no {
     color: #B94A48;
 }
 div.seebreath {
-    height: 130px;
+    min-height: 130px;
     margin-top: 80px;
     font-style: normal;
+    z-index: 100;
 }
 div.seebreath p em {
     font-size: 18pt;

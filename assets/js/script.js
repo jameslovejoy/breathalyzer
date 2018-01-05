@@ -46,6 +46,7 @@ breathalyzer.output = function(weatherdata, seebreath) {
 	$("td.humidity").html(weatherdata.currently.humidity * 100 + "%");
 	$("p.seebreath").html(seebreath).removeClass("yes no").addClass(seebreath.toLowerCase());
 	$("div.loading").hide();
+	$("p.seebreath").hide().show(0); // Force redraw
 
 };
 
